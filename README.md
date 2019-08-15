@@ -33,7 +33,7 @@ The weeks including these holidays are weighted five times higher in the evaluat
 Part of the challenge presented by this competition is modeling the effects of markdowns on these holiday weeks in the absence of complete/ideal historical data.
 
 
-<b> Test Data:<b> 
+<b> Test Data:</b> 
 All the above information except Weekly Sales which need to be predicted. The period is 39 weeks during Nov’12 – Jul13 period
   
 # <span style="color:red"><u>Feature Engineering to tune model for holiday markdowns</u></span>

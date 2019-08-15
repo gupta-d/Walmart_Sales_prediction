@@ -1,2 +1,2 @@
 # salespredictions
-<a href = "predictions.html"> 'Sales' </a>
+<a href = "../predictions.html"> 'Sales' </a>

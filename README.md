@@ -26,8 +26,7 @@ Stores Size & Type ( A, B or C)
     <li>Date - the week</li>
     <li>Temperature - average temperature in the region</li>
     <li>Fuel_Price - cost of fuel in the region</li>
-    <li>MarkDown1-5 - anonymized data related to promotional markdowns that Walmart is running.</li>
-    <li>MarkDown data is only available after Nov’11, and is not available for all stores all the time. Any missing value is marked with an NA.</li>
+    <li>MarkDown1-5 - anonymized data related to promotional markdowns that Walmart is running. MarkDown data is only available after Nov’11, and is not available for all stores all the time. Any missing value is marked with an NA.</li>
     <li>CPI - the consumer price index</li>
     <li>Unemployment - the unemployment rate</li>
     <li>IsHoliday - whether the week is a special holiday week</li>

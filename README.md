@@ -1,4 +1,4 @@
-![Screenshot-1]("/static/images/prediction.png")
+![Screenshot-1]("static/images/prediction.png")
 
 
 # <span style="color:red"><u>Background</u></span>

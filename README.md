@@ -1,3 +1,6 @@
+![Screenshot-1]("/static/images/prediction.png")
+
+
 # <span style="color:red"><u>Background</u></span>
 
 We intend to carry out analysis of walmart stores sales data using tableau platform and prediction of future sales using python-scikit-learn. Complete tableau analysis as well sales prediction is available as a webpage at following link:

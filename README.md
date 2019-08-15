@@ -16,17 +16,18 @@ Total records = 45 stores x 99 departments x 142 weeks (450k + records)
 <b> Stores information:</b> 
 Stores Size & Type ( A, B or C)
 
-</b> Additional Features:<b> 
-Store - the store number
-Date - the week
-Temperature - average temperature in the region
-Fuel_Price - cost of fuel in the region
-MarkDown1-5 - anonymized data related to promotional markdowns that Walmart is running. 
-MarkDown data is only available after Nov’11, and is not available for all stores all the time. Any missing value is marked with an NA.
-CPI - the consumer price index
-Unemployment - the unemployment rate
-IsHoliday - whether the week is a special holiday week
-
+<b> Additional Features:<b> 
+  <ul>
+    <li>Store - the store number</li>
+    <li>Date - the week</li>
+    <li>Temperature - average temperature in the region</li>
+    <li>Fuel_Price - cost of fuel in the region</li>
+    <li>MarkDown1-5 - anonymized data related to promotional markdowns that Walmart is running.</li>
+    <li>MarkDown data is only available after Nov’11, and is not available for all stores all the time. Any missing value is marked with an NA.</li>
+    <li>CPI - the consumer price index</li>
+    <li>Unemployment - the unemployment rate</li>
+    <li>IsHoliday - whether the week is a special holiday week</li>
+    </ul>
 Markdowns precede prominent holidays, the four largest of which are the Super Bowl, Labor Day, Thanksgiving, and Christmas. 
 The weeks including these holidays are weighted five times higher in the evaluation than non-holiday weeks.
 Part of the challenge presented by this competition is modeling the effects of markdowns on these holiday weeks in the absence of complete/ideal historical data.
@@ -38,15 +39,26 @@ All the above information except Weekly Sales which need to be predicted. The pe
 # <span style="color:red"><u>Feature Engineering to tune model for holiday markdowns</u></span>
 
 <b>Created New Features for :</b>
-If Markdown data is available
-Median MarkDowns 
-Median Sales
-Month
-If week covers Special Holiday (Super Bowl, Labor Day, Thanksgiving, and Christmas), or preceding/after special holiday.
-
+  <ul>
+    <li>If Markdown data is available</li>
+    <li>Median MarkDowns </li>
+    <li>Median Sales</li>
+    <li>Month</li>
+    <li>If week covers Special Holiday (Super Bowl, Labor Day, Thanksgiving, and Christmas), or preceding/after special holiday.</li>
+  </ul>
 <b>Handling Nulls:</b>
-CPI/Unemployment nulls are filled with preceding valid value (forward fill)
-MarkDown Nulls filled with 0 after creating separate features for median Markdowns and missing Markdowns
+  <ul>
+    <li>CPI/Unemployment nulls are filled with preceding valid value (forward fill)</li>
+    <li>MarkDown Nulls filled with 0 after creating separate features for median Markdowns and missing Markdowns</li>
+  </ul>
 
   
-
+# <span style="color:red"><u>Modelling with Random Forest Regressor</u></span>
+<ul>
+  <li> Convert categorical features to one hot encoded features using pandas</li>
+  <li> Applied MinMax scaling using scikit-learn 
+  <li> Tried Linear SVC, KNN & Random forest regressor to train the model. Random Forest results were better. Used Random Forest Regressor to train using training dataset using 100 trees, cross validation score achieved for mean absolute error was <1500 on train dataset. </li>
+  <li> Used trained model to predict the sales for test dataset. As per kaggle submission the MAE score achieved was 3335 (dataset sales mean was ~16000). kaggle ranking was 261</li>
+  <li> Future tasks: Use RNN based models to improve the score.</li>
+ </ul>
+  

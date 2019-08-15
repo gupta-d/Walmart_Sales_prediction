@@ -16,7 +16,7 @@ Total records = 45 stores x 99 departments x 142 weeks (450k + records)
 <b> Stores information:</b> 
 Stores Size & Type ( A, B or C)
 
-<b> Additional Features:<b> 
+<b> Additional Features:</b> 
   <ul>
     <li>Store - the store number</li>
     <li>Date - the week</li>
